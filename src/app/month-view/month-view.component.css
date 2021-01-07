@@ -1,27 +1,9 @@
 textarea {
   resize: none;
-  vertical-align: top;
-  background-color: dimgrey;
-  border-color: darkslategray;
+  background-color: #303030;
+  border-color: white;
+  color: white;
 }
-label {
-  display: block;
-}
-
-.month {
-  position: fixed;
-  top: 7.5%;
-  left: 2.5%;
-  display: inline-flex;
-  flex-wrap: wrap;
-}
-
 .current {
-  position: absolute;
-  top: 2.5%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  color: gray;
+  text-align: center;
 }
