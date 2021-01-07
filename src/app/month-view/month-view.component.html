@@ -1,0 +1,6 @@
+<div id="current" class="current"></div>
+<div class="month">
+  <a *ngFor="let day of currentdays"><label for="{{day}}">{{day}}</label><textarea rows="6" cols="33" attr.id = "{{day}}"></textarea></a>
+  <a id="note" hidden=true><label for="notes">Notes:</label><textarea rows="6" cols="132" id ="notes"></textarea></a>
+</div>
+

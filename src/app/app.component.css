@@ -1,0 +1,12 @@
+.monthnav {
+  position: absolute;
+  left: 50%;
+  top: 6%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.monthbutton {
+  background-color: dimgrey;
+  border-color: darkslategray;
+}
