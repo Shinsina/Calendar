@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Calendar</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="bundle.js" defer></script>
+</head>
+<body x-data="calendarController" class="bg-neutral-900 text-neutral-300 font-sans">
+  <nav class="grid gap-4 grid-cols-12 text-2xl p-2" x-bind="selectMonth">
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      January
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      February
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      March
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      April
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      May
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      June
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      July
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      August
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      September
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      October
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      November
+    </button>
+    <button
+      class="bg-neutral-700 hover:bg-neutral-600 active:bg-neutral-500"
+      @click="$dispatch('select-month', $el.innerHTML)"
+    >
+      December
+    </button>
+  </nav>
+  <h1 class="text-center text-6xl" x-text="selectedMonth.name"></h1>
+  <div class="grid gap-4 grid-cols-7 p-2">
+    <template x-for="(date, index) in selectedMonth.dates">
+      <div class="col-span-1 flex flex-col">
+        <label x-text="index + 1"></label>
+        <textarea
+          class="bg-neutral-700 resize-none border-2 border-white"
+          x-model="selectedMonth.dates[index]"
+          rows="6"
+          cols="25"
+        ></textarea>
+      </div>
+    </template>
+  </div>
+</body>
+</html>
